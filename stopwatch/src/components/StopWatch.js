@@ -1,21 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import Card1 from "./Cards.js/Card1";
-import Card2 from "./Cards.js/Card2";
-import Card3 from "./Cards.js/Card3";
-import Card4 from "./Cards.js/Card4";
 import TotalCountCard from "./Cards.js/TotalCountCard";
 
 const StopWatch = () => {
+  const [cards] = useState([
+    "Stop Watch 1",
+    "Stop Watch 2",
+    "Stop Watch 3",
+    "Stop Watch 4",
+  ]);
+
   return (
     <div className="stopWatches">
       <div className="header">
         <TotalCountCard />
       </div>
       <div className="cards">
-        <Card1 />
-        <Card2 />
-        <Card3 />
-        <Card4 />
+        {cards.map((data) => {
+          return <Card1 name={data} />;
+        })}
       </div>
     </div>
   );

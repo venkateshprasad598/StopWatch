@@ -2,7 +2,7 @@ import React from "react";
 import { formatTime } from "../formatTime";
 import useTimer from "../useTimer";
 
-const Card1 = () => {
+const Card1 = ({ name }) => {
   //useTimer for starting, Pausing, Resuming and Reseting the Stopwatch and displaying the returned time string on the screen
 
   const {
@@ -18,7 +18,7 @@ const Card1 = () => {
 
   return (
     <div className="app">
-      <h3>Stopwatch 1</h3>
+      <h3>{name}</h3>
       <div className="stopwatch-card">
         <p>{formatTime(timer)}</p>
         <p>Count : {count}</p>
