@@ -2,9 +2,8 @@ import React from "react";
 import { formatTime } from "../formatTime";
 import useTimer from "../useTimer";
 
-const Card1 = ({ name }) => {
+const Card = ({ name }) => {
   //useTimer for starting, Pausing, Resuming and Reseting the Stopwatch and displaying the returned time string on the screen
-
   const {
     timer,
     isActive,
@@ -39,4 +38,4 @@ const Card1 = ({ name }) => {
   );
 };
 
-export default Card1;
+export default Card;

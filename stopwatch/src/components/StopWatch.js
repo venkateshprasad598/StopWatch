@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Card1 from "./Cards.js/Card1";
+import Card from "./Cards.js/Card";
 import TotalCountCard from "./Cards.js/TotalCountCard";
 
 const StopWatch = () => {
@@ -17,7 +17,7 @@ const StopWatch = () => {
       </div>
       <div className="cards">
         {cards.map((data) => {
-          return <Card1 name={data} />;
+          return <Card name={data} />;
         })}
       </div>
     </div>
